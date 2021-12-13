@@ -1,0 +1,24 @@
+<div class="segment">
+  <div style="width: 100%" id="{%p_id%}" class="ui card">
+    <div class="content">
+      <div>
+        <h3 style="display: inline" class="header">{%p_title%}</h3>
+        <span class="meta"></span>
+      </div>
+      <div class="meta">{%p_date%}</div>
+      <div class="description">
+        <p>{%p_content%}</p>
+      </div>
+    </div>
+  </div>
+  <div style="display: flex; justify-content: end">
+    <span id="view_comments" style="margin-bottom: 1em" class="ui basic button">Read comments</span>
+    <button id="view_add_comment" style="margin-bottom: 1em" class="ui basic grey button">Add comment</button>
+    <button id="{%like_id%}" style="margin-bottom: 1em" class="ui {%like_style%} blue button">{%like_label%}</button>
+    <a style="height: 100%;margin-top: 0.3em;" class="ui basic red left pointing label">
+      {%num_of_likes%}
+    </a>
+    <button id="visit_profile_by_post" style="margin-bottom: 1em" class="ui {%visit_profile_hidden%} basic green button">Visit profile</button>
+  </div>
+</div>
+

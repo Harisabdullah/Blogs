@@ -1,0 +1,30 @@
+<div id="create_new_post_card" class="ui segment">
+    <div>
+        <div style="width: 34rem" class="ui six wide form">
+            <h5 class="teal">Create new post</h5>
+
+            <div class="field">
+                <div style="display: flex; justify-content: space-between">
+                    <div id="err_new_post_title_empty" class="ui hidden pointing below red basic label">
+                        Title cannot be empty
+                    </div>
+                </div>
+                <input id="new_post_title" type="text" name="title" placeholder="Enter an interesting title.">
+            </div>
+            <div class="field">
+                <textarea id="new_post_content" placeholder="Let your heart out."></textarea>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: end">
+            <button id="publish" style="margin-top: 0.5em" class="ui teal button">Publish</button>
+        </div>
+    </div>
+</div>
+<div style="background-color: transparent" id="new_post_success" class="ui teal hidden icon message">
+    <i class="check circle outline icon"></i>
+    <div class="content">
+        <div class="teal header">
+            Post Created
+        </div>
+    </div>
+</div>

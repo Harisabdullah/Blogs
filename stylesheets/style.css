@@ -1,0 +1,24 @@
+.container{
+    height: 100%;
+}
+.form_container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.segments{
+    border: none !important;
+    box-shadow: none !important;
+}
+.gainsboro{
+    color:gainsboro !important;
+}
+.hidden{
+    display: none !important;
+}
+.buffer-x{
+    margin-left: 1em;
+}

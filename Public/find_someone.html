@@ -1,0 +1,27 @@
+<div style="-webkit-box-shadow: none; box-shadow: none; border: none; width: 100%" class="ui segment">
+    <div>
+        <div style="width: 34rem" class="ui six wide form">
+            <div class="field">
+                <div style="display: flex; justify-content: space-between">
+                    <div id="err_new_bio_cannot_be_empty" class="ui hidden pointing below red basic label">
+                        Cannot be empty
+                    </div>
+                </div>
+                <div id="err_query_empty" class="ui pointing below hidden red basic label">
+                    Can't find someone with no name :/
+                </div>
+                <div class="inline field">
+                    <div class="menu item">
+                        <div class="ui icon input">
+                            <input id="query_name" type="text" placeholder="Search...">
+                            <i class="search icon"></i>
+                        </div>
+                        <button id="search_name" style="margin-top: 0.5em" class="ui basic green button">Search</button>
+
+                    </div>
+                    <div id="query_result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

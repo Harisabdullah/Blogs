@@ -1,0 +1,35 @@
+<div class="container ">
+    {%logged_in_as%}
+    <div class="ui grid">
+        <div style="width: 14%">
+            <div id="control_menu" style="position:fixed; top: 4.5em" class="ui six wide vertical menu">
+                    <div class="item">
+                        <div class="menu">
+                            <a id="visit_my_profile" class="item">My profile</a>
+                            <a id="get_timeline" class="item">Feed</a>
+                            <a id="change_name" class="item">Change Name</a>
+                            <a id="update_pass" class="item">Update Password</a>
+                            <a id="update_bio" class="item">Update Bio</a>
+                            <a id="manage_posts" class="item">Manage posts</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="menu">
+                            <a id="manage_followers" class="item">Manage Followers</a>
+                            <a id="manage_following" class="item">Manage Following</a>
+                            <a id="view_follow_req" class="item">Follow requests</a>
+                            <a id="find_someone" class="item">Find someone</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div style="width: 50%; margin-top: 5.5em" class="ui six wide form_container">
+            <div id="post_cards" style="-webkit-box-shadow: none; box-shadow: none; border: none; width: 100%" class="ui segment">
+                {%Post_cards%}
+            </div>
+        </div>
+        <div style="right: 1.5em;bottom: 3em;position: fixed;justify-content: end;" class="ui six wide form_container">
+            {%new_post_card%}
+        </div>
+    </div>
+</div>

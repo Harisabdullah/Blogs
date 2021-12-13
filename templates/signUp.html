@@ -1,0 +1,52 @@
+<div class="container">
+    <div id="sign_up_card_container" class="form_container">
+        <div class="ui">
+            <h2 class="ui teal center aligned icon header">
+                <i class="circular users icon"></i>
+                BLOG POST
+            </h2>
+        </div>
+        <div class="ui form segments no">
+            <div id="err_username_taken" class="ui hidden pointing below red basic label">
+                This username is already taken
+            </div>
+            <div class="column inline field">
+                <div class="ui left icon input">
+                    <input id="username" type="text" placeholder="Username" required>
+                    <i class="user icon"></i>
+                </div>
+                <div class="ui left icon input">
+                    <input id="password" type="password" placeholder="Password" required >
+                    <i class="lock icon"></i>
+                </div>
+            </div>
+            <div class="column inline field" >
+                <div class="ui left icon input">
+                    <input id="first_name" type="text" placeholder="First Name" required>
+                </div>
+                <div class="ui left icon input">
+                    <input id="last_name" type="text" placeholder="Last Name" required>
+                </div>
+            </div>
+            <div class="column inline field" >
+                <div class="ui left icon input">
+                    <input id="date_of_birth" type="date" class="gainsboro" required>
+                    <i class="calendar alternate outline icon"></i>
+                </div>
+                <select name="Gender" id="Gender" class="gainsboro">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+                <div class="buffer-x ui left input">
+                    <button id="sign_up" class="ui teal button">
+                        Sign me Up !
+                    </button>
+                </div>
+            </div>
+            <div id="err_empty_fields" class="ui pointing red hidden basic label">
+                Fields cannot be empty
+            </div>
+        </div>
+    </div>
+</div>
+

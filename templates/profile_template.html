@@ -1,0 +1,13 @@
+<div id="{%username%}">
+    <div style="text-align: center" class="ui segment">
+        <img class="ui centered small circular image" src="https://robohash.org/{%f_name%} {%l_name%}">
+        <h3 class="ui header">{%f_name%} {%l_name%}</h3>
+        <button id="{%follow_action%}" style="margin-bottom: 1em" class="ui green {%follow_btn_hidden%} {%follow_style%} button">{%follow_label%}</button>
+        <div class="description"><b>Bio: </b>{%bio%}</div>
+        <div class="meta"><b>Followers: </b>{%num_of_followers%}</div>
+        <div class="meta"><b>Following: </b>{%num_of_following%}</div>
+    </div>
+    <div class="ui segment">
+        {%Post_cards%}
+    </div>
+</div>

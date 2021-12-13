@@ -1,0 +1,146 @@
+// const sql = require('mssql');
+// const express = require('express');
+// const PORT = 3000;
+//
+// const app = express();
+
+// const  config = {
+//     user:  "admin", // sql user
+//     password:  "191491", //sql user password
+//     server: "DESKTOP-93O0BAR\\DS_SQL", // if it does not work try- localhost
+//     database:  "DS_SQL",
+//     port: 1433
+// }
+//
+// let connection = sql.connect(config, (err) =>{
+//     if(err){
+//         console.log(err);
+//     } else{
+//         res.send('DB connected');
+//     }
+// })
+//
+// app.get('/', function (req, res){
+//     let connection = sql.connect(config, (err) =>{
+//         if(err){
+//             console.log(err);
+//         } else{
+//             res.send('DB connected');
+//         }
+//     })
+// })
+//
+// app.listen(PORT, function (){
+//     console.log('Server started at ' + PORT)
+// })
+
+
+
+
+
+
+
+
+
+// var mssql = require('mssql');
+
+// mssql config
+
+// var dbConfig = {
+//
+//
+//     server:"DESKTOP-93O0BAR\\DS_SQL",
+//
+//     database:"SQ_SQL",
+//
+//     user:"admin", // Update it
+//
+//     password:"191491", // Update it
+//
+// port:1433
+//
+// }
+//
+// // Connection to DB for Mysql
+//
+// var conn;
+//
+// connectToDB=function(){
+//
+//     conn = new mssql.ConnectionPool(dbConfig);
+//
+//     let con = conn.connect(function (err){
+//
+//         if (err){
+//             console.log(err);
+//
+//         }
+//     });
+//     console.log(con);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+const sql = require('mssql')
+const sqlConfig = {
+    user: "Blogs_user",
+    password: "191491",
+    //database: "Blogs",
+    server: "localhost",
+    pool: {
+        max: 10,
+        min: 0,
+        idleTimeoutMillis: 3000
+    },
+    options: {
+        encrypt: false, // for azure
+        trustServerCertificate: true // change to true for local dev / self-signed certs
+    }
+}
+let res;
+const j = async () => {
+    try {
+        // make sure that any items are correctly URL encoded in the connection string
+        await sql.connect(sqlConfig)
+        //const result = await sql.query`use DS_SQL`;
+        //const result = await sql.query`alter table student_t alter column name char(40)`;
+        //const result = await sql.query`insert into student_t (name) values ('Haris')`;
+        //const result = await sql.query`select * from student_t`;
+
+        // language=SQL format=false
+
+//console.log(
+            //await sql.query`alter table student_t alter column name char(40)` +
+            //await sql.query`drop table student_t` +
+            //await sql.query`use Blogs`[1] +
+            //await sql.query`SELECT * FROM information_schema.tables` +
+            //await sql.query`SELECT * FROM Blog_user` +
+
+//             await sql.query`INSERT INTO [Blog_user]
+// VALUES
+//   ('GKL28EFB2KQ','Cullen Kelly','Cherokee Bartlett','Dec 29, 1988','M','Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare.','EDC34INI0DJ'),
+//   ('CGJ84NIE8NU','Kyla House','Dai Stokes','May 10, 2000','Yes','F vel quam dignissim pharetra. Nam ac nulla. In tincidunt congue turpis. In condimentum. Donec','VKM45GYB7XF'),
+//   ('GRK59QST7JJ','McKenzie Hays','Aspen Mercado','Nov 13, 1989','F','eget varius ultrices, mauris ipsum porta elit, a','DKY43UBU8WV'),
+//   ('HYI13EIO6FB','Kevin Gonzalez','Alexa Langley','Mar 1, 1992','M','Proin mi. Aliquam gravida mauris ut mi. Duis risus odio, auctor','QDS62KDB7RH'),
+//   ('UOB57IHT6JD','Kai Willis','Raya Ramsey','May 14, 2002','F','magnis dis parturient montes, nascetur ridiculus mus. Aenean','BIR19FJK4TQ')` +
+
+        //await sql.query`SELECT * FROM Blog_user`
+    //);
+        await sql.query`use Blogs`;
+        console.log(await sql.query(`select * from Blog_user where(gender = 'F')`));
+    } catch (err) {
+        console.log(err)
+    }
+}
+j();
+//console.log(res);
+
