@@ -1,6 +1,6 @@
 exports.sqlConfig = {
     user: "Blogs_user",
-    password: "191491",
+    password: "pass",
     //database: "Blogs",
     server: "localhost",
     pool: {
